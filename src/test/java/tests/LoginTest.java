@@ -13,8 +13,8 @@ public class LoginTest extends BaseTest {
     @Test(testName = "Успешный вход на сайт")
     public void SuccessfulLogin() {
         open("https://log.finalsurge.com/");
-        loginPage.enterUsername("atasdew@mail.ru")
-                .enterPassword("Frozent470")
+        loginPage.enterUsername(user)
+                .enterPassword(password)
                 .clickLoginButton();
         Assert.assertTrue(loginPage.isUserLogIn(), "Вход не выполнен.");
     }
